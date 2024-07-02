@@ -9,7 +9,7 @@ int result = HelloJava.myFn();
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>첫 JSP 웹페이지</title>
 </head>
 <body>
 	<h2>처음 만들어 보는 JSP</h2>
