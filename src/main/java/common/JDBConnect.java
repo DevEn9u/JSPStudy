@@ -37,7 +37,7 @@ public class JDBConnect {
 	// 인자 생성자1 : 4개의 매개변수를 선언
 	public JDBConnect(String driver, String url, String id, String pwd) {
 		try {
-			/* 기본생성자는 고정된 값ㅇ블 통해 DB정보를 설정했지만,
+			/* 기본생성자는 고정된 값을 통해 DB정보를 설정했지만,
 			 여기서는 매개변수를 통해 전달된 값을 통해 DB 연결을 시도한다. */
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, id, pwd);
