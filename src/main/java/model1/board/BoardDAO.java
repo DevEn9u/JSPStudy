@@ -171,6 +171,7 @@ public class BoardDAO extends JDBConnect {
 		}
 		return dto;
 	}
+	
 	// 게시물의 조회수를 1 증가시킨다.
 	public void updateVisitcount(String num) {
 		/* 게시물의 일련번호를 통해 visitcount를 1 증가시킨다.
@@ -188,6 +189,7 @@ public class BoardDAO extends JDBConnect {
 			e.printStackTrace();
 		}
 	}
+	
 	// 게시물 수정하기
 	public int updateEdit(BoardDTO dto) {
 		int result = 0;

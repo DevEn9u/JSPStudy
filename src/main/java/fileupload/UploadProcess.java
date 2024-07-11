@@ -16,11 +16,11 @@ Annotation을 통해 Mapping한다. file upload form 에서 submit하면
 @WebServlet("/13FileUpload/UploadProcess.do")
 /*
 maxFileSize: 개별 파일의 최대 용량을 설정(여기서는 1Mb)
-maxRequestSize: 첨부할 전체 파일의 용량을 설정(여기서는 10Mb)
+maxRequestSize: 첨부할 전체 파일의 용량을 설정(여기서는 3Mb)
  */
 @MultipartConfig(
 	maxFileSize = 1024 * 1024 * 1,
-	maxRequestSize = 1024 * 1024 * 10
+	maxRequestSize = 1024 * 1024 * 3
 )
 
 public class UploadProcess extends HttpServlet {

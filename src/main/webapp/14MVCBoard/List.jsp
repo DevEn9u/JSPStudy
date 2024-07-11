@@ -71,8 +71,7 @@
 			            <td>
 			            	<!-- 다운로드 링크는 첨부파일이 있을 때만 표시한다. -->
 			            	<c:if test="${ not empty row.ofile }">
-			            		<a href="../mvcboard/download.do?ofile=${ row.ofile }
-			            			$sfile=${ row.sfile }&idx=${ row.idx }">[Down]
+			            		<a href="../mvcboard/download.do?ofile=${ row.ofile }&sfile=${ row.sfile }&idx=${ row.idx }">[Down]
 			            		</a>
 			            	</c:if>
 			            </td>

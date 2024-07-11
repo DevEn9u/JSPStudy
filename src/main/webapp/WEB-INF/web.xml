@@ -123,4 +123,19 @@
   	<url-pattern>/mvcboard/list.do</url-pattern>
   </servlet-mapping>
   
+  <!-- 글쓰기 매핑 -->
+  <servlet>
+  	<servlet-name>MVCBoardWrite</servlet-name>
+  	<servlet-class>model2.mvcboard.WriteController</servlet-class>
+  	<!-- 파일 업로드시 제한 용량 설정 -->
+  	<multipart-config>
+  		<max-file-size>104857600</max-file-size> <!-- 1Mb -->
+  		<max-request-size>104857600</max-request-size> <!-- 10Mb -->
+  	</multipart-config>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MVCBoardWrite</servlet-name>
+  	<url-pattern>/mvcboard/write.do</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
