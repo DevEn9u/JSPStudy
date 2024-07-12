@@ -1,3 +1,4 @@
+<%@page import="utils.CookieManager"%>
 <%@page import="model1.board.BoardDTO"%>
 <%@page import="model1.board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -7,13 +8,18 @@
 String num = request.getParameter("num");
 // DAO 인스턴스 생성
 BoardDAO dao = new BoardDAO(application);
+
 // 게시물 조회수 증가
-dao.updateVisitcount(num);
+// int dailyVisitCount = dao.updateVisitcount(num);
+
+// if(num != null) {
+// 	CookieManager.makeCookie(response, "dailyVisitCount", dailyVisitCount, 86400);
+// }
+
 // 출력할 게시물 인출
 BoardDTO dto = dao.selectView(num);
 // DB 연결 해제
 dao.close();
-
 %>
 <!DOCTYPE html>
 <html>
