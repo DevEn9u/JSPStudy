@@ -16,7 +16,7 @@
 	<jsp:include page="../Common/Link.jsp" />
 	<h2>로그인 페이지</h2>
 	<!-- 로그인을 위해 폼값을 전송한 후 만약 조건에 맞는 회원정보가
-	없다면 request 영역에 에러메세지를 저장한 후 현재페이지로 forwar한다.
+	없다면 request 영역에 에러메세지를 저장한 후 현재페이지로 forward한다.
 	request 영역은 forward된 페이지까지는 영역이 공유되므로 아래의 메세지를
 	출력할 수 있다. -->
 	<span style="color : red; font-size: 1.2em;">

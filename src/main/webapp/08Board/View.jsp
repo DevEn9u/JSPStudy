@@ -9,12 +9,13 @@ String num = request.getParameter("num");
 // DAO 인스턴스 생성
 BoardDAO dao = new BoardDAO(application);
 
-// 게시물 조회수 증가
-// int dailyVisitCount = dao.updateVisitcount(num);
 
-// if(num != null) {
-// 	CookieManager.makeCookie(response, "dailyVisitCount", dailyVisitCount, 86400);
-// }
+String ckValue = CookieManager.readCookie(request, "board-" + num);
+if(!ckValue.equals("read")) {
+	CookieManager.makeCookie(response, "board-" + num, "read", 86400);
+	// 게시물 조회수 증가
+	dao.updateVisitcount(num);
+}
 
 // 출력할 게시물 인출
 BoardDTO dto = dao.selectView(num);
