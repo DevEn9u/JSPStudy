@@ -88,7 +88,7 @@
             	<!-- 페이지바로가기 링크 출력 -->
                 ${ map.pagingImg }
             </td>
-            <td width="100">
+            <td width="10%">
             	<button type="button" onclick="location.href='../mvcboard/write.do';">글쓰기</button>
             </td>
         </tr>
